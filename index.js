@@ -7,7 +7,7 @@ try {
   console.log(`🇺🇦 Hello ${nameToGreet}!`);
 
   const howToGreet = core.getInput("how-to-greet");
-  comsole.log(howToGreet);
+  console.log(howToGreet);
 
   const time = new Date().toTimeString();
   core.setOutput("time", time);
