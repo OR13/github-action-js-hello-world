@@ -1,0 +1,24 @@
+{
+  "name": "github-action-js-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OR13/github-action-js-hello-world.git"
+  },
+  "keywords": [],
+  "author": "Orie Steele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OR13/github-action-js-hello-world/issues"
+  },
+  "homepage": "https://github.com/OR13/github-action-js-hello-world#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}
