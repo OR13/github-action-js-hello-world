@@ -1,6 +1,6 @@
 Hello world
 
-based on https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action
+Based on https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action
 
 # Hello world javascript action
 
@@ -20,6 +20,20 @@ The time we greeted you.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
-with:
-who-to-greet: 'Mona the Octocat'
+```yml
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: or13/github-action-js-hello-world@v1.1
+        with:
+          who-to-greet: "Mona the Octocat"
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
+```
