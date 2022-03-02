@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx ncc build index.js --license licenses.txt",
-    "prerelease": "npm run build && git add dist/index.js && git commit -m ':rocket:'",
+    "prerelease": "npm run build && git add dist/index.js && git commit -m ':rocket:' && git push origin master",
     "release": "npm version patch && git add ./package.json",
     "postrelease": "git push --tags"
   },
