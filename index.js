@@ -12,7 +12,12 @@ try {
   console.log(howToGreet);
 
   const file = fs.readFileSync(howToGreet);
-  console.log(file.toString());
+
+  const parsedInput = JSON.parse(file.toString());
+  const extended = { ...parsedInput, yolo: 1 };
+
+  const whenToGreet = core.getInput("when-to-greet"); // a path
+  fs.writeFileSync(whenToGreet, JSON.stringify(extended));
 
   const time = new Date().toTimeString();
   core.setOutput("time", time);
