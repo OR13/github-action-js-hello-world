@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: or13/github-action-js-hello-world@v1.2.8
+        uses: or13/github-action-js-hello-world@v1.2.9
         with:
           who-to-greet: ${{ secrets.HELLO_WORLD }}
           how-to-greet: ./example.json
