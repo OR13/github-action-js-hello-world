@@ -8472,7 +8472,6 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
 const fs = __nccwpck_require__(7147);
-const path = __nccwpck_require__(1017);
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -8482,7 +8481,7 @@ try {
   const howToGreet = core.getInput("how-to-greet"); // a path
   console.log(howToGreet);
 
-  const file = fs.readFileSync(path.resolve(process.cwd(), howToGreet));
+  const file = fs.readFileSync(howToGreet);
   console.log(file.toString());
 
   const time = new Date().toTimeString();
