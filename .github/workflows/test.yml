@@ -10,7 +10,7 @@ jobs:
         uses: or13/github-action-js-hello-world@v1.2.11
         with:
           who-to-greet: ${{ secrets.HELLO_WORLD }}
-          how-to-greet: ${{ github.workspace }}/example.json
+          how-to-greet: ${{ github.workspace }}/../example.json
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
