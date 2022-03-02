@@ -2,7 +2,6 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 const fs = require("fs");
-const path = require("path");
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -12,7 +11,7 @@ try {
   const howToGreet = core.getInput("how-to-greet"); // a path
   console.log(howToGreet);
 
-  const file = fs.readFileSync(path.resolve(process.cwd(), howToGreet));
+  const file = fs.readFileSync(howToGreet);
   console.log(file.toString());
 
   const time = new Date().toTimeString();
